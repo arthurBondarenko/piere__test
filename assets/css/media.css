@@ -1,0 +1,13 @@
+@media screen and (max-width: 1405px) {
+    .gallery__items {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  }
+
+
+  @media screen and (max-width: 991px) {
+    .nav__item {
+        padding-right: 7px;
+        font-size: 14px;
+    }
+  }
