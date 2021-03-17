@@ -7,22 +7,26 @@ html {
 }
 
 .wrapper {
-  min-height: 100vh;
+  height: 100%;
   overflow: hidden;
   background-color: #fff;
+  margin: 0 auto;
 }
 
 .wrapper__container {
   max-width: 1366px;
   margin: 0 auto;
-  position: relative;
 }
 
 /* ---------------------------------- Navigacija ---------------------------------- */
+.header__burger {
+  display: none;
+}
+
 .nav {
-  position: relative;
-  max-width: 100%;
-  height: auto;
+  position: fixed;
+  width: 100%;
+  max-height: 93px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,6 +35,8 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 9999;
+  background-color: #fff;
 }
 
 .nav__list {
@@ -38,6 +44,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
+  z-index: 10;
 }
 
 .nav__item {
@@ -46,6 +53,7 @@ html {
   padding-right: 17.51px;
   font-weight: 500;
   font-family: Montserrat;
+  z-index: 10;
 }
 
 .nav__item:hover {
@@ -60,14 +68,18 @@ html {
 
 .logo img {
   padding-left: 62px;
+  z-index: 10;
+  max-height: 93px;
 }
 
 select {
+  background: none;
   border: none;
   padding-left: 51px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  z-index: 10;
 }
 
 /* ---------------------------------- /Navigacija ---------------------------------- */
@@ -82,7 +94,6 @@ select {
 .wave {
   position: absolute;
   width: 100%;
-  height: 100%;
 }
 
 .wave svg {
@@ -111,6 +122,7 @@ video[poster] {
   margin: 0 auto;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  border: none;
 }
 
 /* triangle */
@@ -129,6 +141,10 @@ video[poster] {
   border-bottom: 15px solid transparent;
   border-left: 25px solid #fff;
   z-index: 100;
+}
+
+.play-btn.hide {
+  display: none;
 }
 
 /* ---------------------------------- /Video block ---------------------------------- */
@@ -263,6 +279,7 @@ video[poster] {
   border-radius: 50px;
   padding: 16px 50px;
   color: #fff;
+  border: none;
 }
 
 .dream__desc button:hover {
@@ -325,6 +342,30 @@ video[poster] {
   border: none;
 }
 
+.form ::-webkit-input-placeholder {
+  color: #2F4858;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.form :-ms-input-placeholder {
+  color: #2F4858;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.form ::-ms-input-placeholder {
+  color: #2F4858;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.form ::placeholder {
+  color: #2F4858;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
 .form__user {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -364,47 +405,23 @@ video[poster] {
 }
 
 .checkdate {
+  display: block;
   margin-bottom: 50px;
 }
 
-.checkdate input[type="checkbox"] {
-  display: none;
-}
-
 .checkdate label {
-  color: #000;
-  cursor: default;
-  font-weight: normal;
-  line-height: 30px;
-  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+[type="checkbox"] {
   vertical-align: middle;
-}
-
-.checkdate label:before {
-  content: " ";
-  color: #000;
-  display: inline-block;
-  font: 20px/14px FontAwesome;
-  margin-right: 15px;
-  position: relative;
-  text-align: center;
-  text-indent: 0px;
-  width: 16px;
-  height: 16px;
-  background: #E7E7E7;
-  border: 1px solid #e3e3e3;
-  -o-border-image: initial;
-     border-image: initial;
-  vertical-align: middle;
-}
-
-.checkdate input:checked + label:before {
-  content: "\f00c";
-}
-
-.checkdate input:disabled + label:before {
-  background: #eee;
-  color: #aaa;
+  margin: -13px 15px 0 0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .form__group-btn {
@@ -424,6 +441,7 @@ video[poster] {
   font-weight: 500;
   font-family: Montserrat;
   color: #fff;
+  border: none;
 }
 
 /* ---------------------------------- /Contact block ---------------------------------- */
@@ -458,6 +476,16 @@ video[poster] {
       -ms-flex-direction: row;
           flex-direction: row;
   padding-bottom: 150px;
+}
+
+.support__block img {
+  height: 80px;
+  width: 242px;
+}
+
+.support__block img:last-child {
+  height: 120px;
+  width: 85px;
 }
 
 .wave-support {

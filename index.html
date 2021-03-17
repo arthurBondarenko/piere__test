@@ -19,8 +19,11 @@
 <body>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
     <div class="wrapper">
-        <div class="wrapper__container">
-            <div class="sidebar">
+        <div class="header__burger">
+                             
+            <span></span>
+        </div>
+
                 <nav class="nav">
 
                     <div class="logo">
@@ -59,10 +62,10 @@
                             <option  value="eng">ru</option>
                             <option  value="eng">en</option>
                         </select>
-
+                    </ul>    
                 </nav>
-            </div>
-        </div>
+
+
 
             <div class="video"> 
                 <div class="wave">
@@ -83,8 +86,18 @@
                         </defs>
                     </svg>
                 </div>
-                <video src="#" poster="assets/img/video.png"></video>
-                <a class="play-btn" href="#"></a>
+
+                <video id="video" width="100%" height="640px" controls="controls" poster="assets/img/video.png">
+    
+                    <source src="assets/NyanCat.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+
+
+
+                   </video>
+                
+                
+                
+                <button id="play_button" class="play-btn" href="# "></button>
             </div>
 
             <div class="wrapper__container">
@@ -212,9 +225,12 @@
                     <div class="checkdate"> 
                         
 	
-                        <input type="checkbox" id="checkbox-id" />
-                        <label for="checkbox-id">Piekrītu, ka mani dati tiks izmantoti likumdošanā noteiktā kārtībā un tiks saglabāti līdz brīdim, kamēr tas būs nepieciešams.</label>
-                    
+                        <!-- <input type="checkbox" id="checkbox-id" />
+                        <label for="checkbox-id">Piekrītu, ka mani dati tiks izmantoti likumdošanā noteiktā kārtībā un tiks saglabāti līdz brīdim, kamēr tas būs nepieciešams.</label> -->
+                        <label>
+                            <input type="checkbox" name="accept" checked/> Piekrītu, ka mani dati tiks izmantoti likumdošanā noteiktā kārtībā un tiks saglabāti līdz brīdim, kamēr tas būs nepieciešams.</a>
+                        </label>
+
                     </div>
                     <div class="form__footer">
                         <div class="form__group form__group-btn ">  
@@ -337,7 +353,7 @@
             </footer>
 
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
      <script src="assets/js/theme.js"></script>
 </body>
 </html>
